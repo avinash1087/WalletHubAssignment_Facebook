@@ -27,21 +27,22 @@ public class LoginPage {
 	@FindBy(id = "pass")
 	public WebElement password;
 
-	@FindBy(id = "u_0_a")
+	@FindBy(css = "input[type=\"submit\"]")
 	public WebElement submit;
 
 	@FindBy(xpath = "//*[@id=\"pagelet_composer\"]/div/div")
 	public WebElement creatPostTextBox;
 
 	public HomePage login() {
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("url")); //Navigate to Facebook.com
+		
 		wait = new WebDriverWait(driver, 20);
 		
-		this.username.sendKeys(prop.getProperty("username"));
-		this.password.sendKeys(prop.getProperty("password"));
+		this.username.sendKeys(prop.getProperty("username")); //Enter Username
+		this.password.sendKeys(prop.getProperty("password")); //Enter Password
 		this.submit.click();
 		
-		wait.until(ExpectedConditions.visibilityOf(creatPostTextBox));
+		wait.until(ExpectedConditions.visibilityOf(creatPostTextBox)); //Wait untill Create A Post box is visible
 		
 		return (new HomePage(driver, prop));
 

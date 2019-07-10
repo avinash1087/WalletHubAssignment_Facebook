@@ -4,3 +4,4 @@
 src/
 target/
 test-output/
+/bin/

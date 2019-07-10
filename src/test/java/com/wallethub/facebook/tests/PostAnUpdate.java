@@ -8,8 +8,7 @@ import com.wallethub.facebook.pages.HomePage;
 import com.wallethub.facebook.pages.LoginPage;
 import com.wallethub.facebook.utility.TestBase;
 
-public class PostAnUpdate extends TestBase {
-
+public class PostAnUpdate extends TestBase{
 	LoginPage objLoginPage;
 	HomePage objHomePage;
 
@@ -26,6 +25,4 @@ public class PostAnUpdate extends TestBase {
 	public void postAnUpdate() {
 		objHomePage.postAnUpdate();
 	}
-	
-	
 }
