@@ -2,6 +2,5 @@
  .project
  .settings/
  src/
- target/
- test-output/
- 
+ target
+ test-output
